@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atelier CycloTech - Calcul du coût de revient complet</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .context, .info, .work {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .work ol {
+            padding-left: 20px;
+        }
+        .work li {
+            margin-bottom: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Atelier CycloTech - Calcul du coût de revient complet</h1>
+    
+    <div class="context">
+        <h2>Contexte</h2>
+        <p>CycloTech est une entreprise française spécialisée dans la fabrication de vélos. C'est une SA valorisée à 750 000€ Elle produit deux types de vélos : des vélos de ville et des VTT. L'entreprise souhaite analyser ses coûts de production pour l'année 2024 afin d'optimiser sa rentabilité.</p>
+        <p>En 2024, CycloTech a produit 10 000 vélos de ville et 5 000 VTT. L'entreprise utilise la méthode des centres d'analyse pour calculer ses coûts de revient complets.</p>
+        <p>Récemment, CycloTech s'est inquiétée de l'arrivée d'un nouveau concurrent sur le marché. Ce concurrent propose des prix de vente inférieurs aux siens :</p>
+        <ul>
+            <li>Vélos de ville : 550 € HT (contre 650 € HT chez CycloTech)</li>
+            <li>VTT : 850 € HT (contre 950 € HT chez CycloTech)</li>
+        </ul>
+        <p>Face à cette situation, CycloTech souhaite comparer ses coûts de revient aux prix de vente du concurrent pour déterminer s'il est possible de baisser ses propres prix tout en conservant ses marges.</p>
+        <p>Le processus de production de CycloTech comprend les étapes suivantes :</p>
+        <ol>
+            <li>Réception et stockage des matières premières</li>
+            <li>Assemblage du cadre</li>
+            <li>Montage des roues</li>
+            <li>Montage des composants (guidon, selle, pédales, etc.)</li>
+            <li>Réglages et ajustements</li>
+            <li>Contrôle qualité</li>
+            <li>Emballage et stockage des produits finis</li>
+        </ol>
+    </div>
+    <br><br>
+
+    <div class="info">
+        <h2>Informations complémentaires</h2>
+        <ol>
+            <li>Les prix de vente HT actuels sont de 650 € pour un vélo de ville et 950 € pour un VTT.</li>
+            <li>Le temps de main-d'œuvre est de 2 heures par vélo de ville dont 20 minutes de montage cadre et 40 minutes de montage composants et 3 heures par VTT dont 40 minutes de montage cadre et 1h20 de montage composants.</li>
+            <li>Le taux horaire de main-d'œuvre directe est de 25 €/heure.</li>
+            <li>L'entreprise a passé 1000 commandes d'approvisionnement au cours de l'année qui correspondent à toute la production.</li>
+            <li>Cela peut sembler étrange mais les quantités de matières premières étant presque équivalentes, nous raisonnerons en moyenne pour les charges directes d'achat.</li>
+            <li>Au 1er janvier 2024, le stock initial de matières premières était de 500 000 € pour un total de 2 500 unités.</li>
+            <li>La rémunération des capitaux propres est fixée à 5% du capital</li>
+            <li>Le service entretien est réparti selon la clé de répartition suivante : Surface en m² des locaux total 2500m² à répartir comme suit<table>
+                <tr>
+                    <th>Centre d'analyse</th>
+                    <th>Surface (m²)</th>
+                </tr>
+                <tr>
+                    <td>Approvisionnement</td>
+                    <td>300</td>
+                </tr>
+                <tr>
+                    <td>Assemblage cadre</td>
+                    <td>600</td>
+                </tr>
+                <tr>
+                    <td>Montage roues</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>Montage composants</td>
+                    <td>400</td>
+                </tr>
+                <tr>
+                    <td>Contrôle qualité</td>
+                    <td>300</td>
+                </tr>
+                <tr>
+                    <td>Marketing</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>Administration</td>
+                    <td>200</td>
+                </tr>
+            </table>
+            
+            </li>
+        </ol>
+    </div>
+
+    <h3>Tableau 1 : Extrait de la balance au 31/12/2024 (montants annuels en euros)</h3>
+    <table>
+        <tr>
+            <th>Compte</th>
+            <th>Intitulé</th>
+            <th>Montant</th>
+        </tr>
+        <tr>
+            <td>6061</td>
+            <td>Fournitures non stockables</td>
+            <td>120 000</td>
+        </tr>
+        <tr>
+            <td>6064</td>
+            <td>Fournitures administratives</td>
+            <td>15 000</td>
+        </tr>
+        <tr>
+            <td>6132</td>
+            <td>Locations immobilières</td>
+            <td>180 000</td>
+        </tr>
+        <tr>
+            <td>615</td>
+            <td>Service Entretien (charges du service auxiliaire entretien)</td>
+            <td>100 000</td>
+        </tr>
+        <tr>
+            <td>6155</td>
+            <td>Autre Entretien sur biens mobiliers</td>
+            <td>45 000</td>
+        </tr>
+        <tr>
+            <td>6161</td>
+            <td>Assurances multirisques</td>
+            <td>35 000</td>
+        </tr>
+        <tr>
+            <td>6226</td>
+            <td>Honoraires</td>
+            <td>50 000</td>
+        </tr>
+        <tr>
+            <td>6231</td>
+            <td>Annonces et insertions</td>
+            <td>75 000</td>
+        </tr>
+        <tr>
+            <td>6411</td>
+            <td>Salaires</td>
+            <td>1 500 000</td>
+        </tr>
+        <tr>
+            <td>6451</td>
+            <td>Cotisations à l'URSSAF</td>
+            <td>600 000</td>
+        </tr>
+        <tr>
+            <td>6811</td>
+            <td>Dotations aux amortissements</td>
+            <td>250 000</td>
+        </tr>
+        <tr>
+            <td>671</td>
+            <td>Charges exceptionnelles sur opérations de gestion</td>
+            <td>30 000</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>Rémunération du capital</td>
+            <td>5% du capital investi</td>
+        </tr>
+    </table>
+
+    <h3>Tableau 2 : Tableau de répartition des charges indirectes (à compléter)</h3>
+    <table>
+        <tr>
+            <th>Centre d'analyse</th>
+            <th>Clé de répartition</th>
+            <th>Unité d'œuvre</th>
+            <th>Nombre d'unités d'œuvre</th>
+        </tr>
+        <tr>
+            <td>Service Entretien</td>
+            <td>Charges de services extérieurs sauf entretien biens locatifs</td>
+            <td>Charges indirectes</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Approvisionnement</td>
+            <td>10% des charges indirectes (sauf entretien)</td>
+            <td>Nombre de commandes</td>
+            <td>1 000</td>
+        </tr>
+        <tr>
+            <td>Assemblage cadre</td>
+            <td>25% des charges indirectes</td>
+            <td>Heures de MOD</td>
+            <td>35 000</td>
+        </tr>
+        <tr>
+            <td>Montage roues</td>
+            <td>15% des charges indirectes</td>
+            <td>Nombre de roues</td>
+            <td>30 000</td>
+        </tr>
+        <tr>
+            <td>Montage composants</td>
+            <td>20% des charges indirectes</td>
+            <td>Heures de MOD</td>
+            <td>25 000</td>
+        </tr>
+        <tr>
+            <td>Contrôle qualité</td>
+            <td>10% des charges indirectes</td>
+            <td>Nombre de vélos</td>
+            <td>15 000</td>
+        </tr>
+        <tr>
+            <td>Marketing</td>
+            <td>10% des charges indirectes</td>
+            <td>% du CA</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Administration</td>
+            <td>10% des charges indirectes</td>
+            <td>% du CA</td>
+            <td>-</td>
+        </tr>
+    </table>
+    
+
+    <div class="work">
+        <h2>Travail à faire</h2>
+        <ol>
+            <li>Déterminer les charges à incorporer aux coûts à partir de l'extrait de la balance.</li>
+            <li>Réaliser un schéma du processus de production pour les deux types de vélos, en incluant les stocks de matières premières et de produits finis. Indiquer à quelles étapes le CUMP doit être calculé.</li>
+            <li>Calculer le CUMP des matières premières au cours de l'année avec le stock initial, sachant que CycloTech a acheté 10 000 unités pour 1 900 000 € par la suite.</li>
+            <li>Compléter le tableau de répartition des charges indirectes en calculant les montants pour chaque centre d'analyse et le coût de l'unité d'œuvre.</li>
+            <li>Calculer le coût de revient complet pour chaque type de vélo en valorisant les stocks de matières premières avec la méthode CUMP.</li>
+            <li>Comparer les coûts de revient complets obtenus aux prix de vente du concurrent.</li>
+            <li>Déterminer si CycloTech peut baisser ses prix pour s'aligner sur ceux du concurrent tout en conservant une marge confortable. Si oui, calculer les nouveaux prix de vente. Si non, proposer des pistes d'optimisation des coûts.</li>
+        </ol>
+    </div>
+</body>
+</html>
